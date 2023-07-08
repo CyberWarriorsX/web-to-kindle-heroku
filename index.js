@@ -13,6 +13,9 @@ registerFont(path.join(__dirname, 'tmp', 'Flick Bold Hollow.ttf'), { family: 'Fl
  
  
 //express()
+app.get('/heroku', (req, res) => {
+  res.sendFile('deploy.html', { root: 'public' });
+});
   app.get('/', (req, res) => {
     const html = `<html>
       <head>
