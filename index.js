@@ -17,23 +17,170 @@ app.get('/heroku', (req, res) => {
   res.sendFile('deploy.html', { root: 'public' });
 });
   app.get('/', (req, res) => {
-    const html = `<html>
-      <head>
-        <title>Thanks Page</title>
-        <style>
-          body {
+    const html = `<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: #000000; 
+            margin: 0;
+            padding: 0;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 100vh;
-            margin: 0;
-          }
-        </style>
-      </head>
-      <body>
-        <h1>Thanks to Suhail Ser</h1>
-      </body>
-    </html>`;
+            overflow: hidden;
+        }
+
+        .custom-link {
+            display: block;
+            width: 60%;
+            padding: 25px 0;
+            font-size: 25px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            border: 5px solid white;
+            border-radius: 35px;
+            margin: 20px 0;
+            position: relative;
+            overflow: hidden;
+            transition: background-color 30s, color 30s, box-shadow 30s;
+            animation: colorChange 40s infinite alternate;
+            color: white;
+            text-shadow: 5px 5px 7px black; /* Adjusted text-shadow */
+        }
+
+        .custom-link::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background-color: rgba(255, 255, 255, 0.2);
+            opacity: 0;
+            transform: scale(0);
+            transition: opacity 0.3s, transform 0.3s;
+        }
+
+        .custom-link:hover {
+            background-color: rgb(0, 128, 128);
+            border-color: rgb(0, 128, 128);
+            color: white;
+            transform: scale(1.1);
+            animation: pulse 1s infinite, colorChange 2s infinite alternate;
+        }
+
+        .custom-link:hover::before {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .box-color-change {
+            animation: colorChange 36s infinite alternate;
+        }
+
+        @keyframes colorChange {
+    0%, 100% {
+        background-color: #673AB7;
+    }
+    10% {
+        background-color: #5B00FF;
+    }
+    20% {
+        background-color: #0083FF;
+    }
+    30% {
+        background-color: #00E6FF;
+    }
+    40% {
+        background-color: #00FF62;
+    }
+    50% {
+        background-color: #A3FF00;
+    }
+    60% {
+        background-color: #35FF00;
+    }
+    70% {
+        background-color: #00F0FF;
+    }
+    80% {
+        background-color: #2E6067;
+    }
+    90% {
+        background-color: #62E5CA;
+    }
+    95% {
+        background-color: #DE00DB;
+    }
+}
+
+
+        .footer {
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            padding: 15px 0;
+            font-size: 25px;
+            border-radius: 31px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.8);
+            animation: colorChange 60s infinite alternate;
+        }
+
+
+        .custom-text {
+            color: white;  
+            font-size: 60px;
+        }
+        
+    </style>
+</head>
+<body>
+    
+<p class="custom-text">🎉 𝐃𝐞𝐩𝐥𝐨𝐲𝐦𝐞𝐧𝐭 𝐦𝐞𝐭𝐡𝐨𝐝𝐬 𝐅𝐨𝐫𝐳𝐞𝐧 𝐌𝐝. ❄️</p>
+    
+   <a href="https://replit.com/@yasithasamujit2/FORZEN-MD?v=1" class="custom-link deploy-heroku box-color-change">SCAN QR-CODE</a>
+
+    <br>
+
+    <a href="https://github.com/yasiyaofc1/FORZEN-MD/fork" class="custom-link fork-github box-color-change">FORK</a>
+
+    <br>
+
+    <a href="https://heroku.com/deploy?template=https://github.com/yasiyaofc1/FORZEN-MD" class="custom-link deploy-heroku box-color-change">DEPLOY ON HEROKU</a>
+
+    <br>
+
+    <a href="https://app.koyeb.com/apps/deploy?type=git&repository=github.com/yasiyaofc1/FORZEN-MD&branch=main&env[BOT_NUMBER]&env[SESSION_ID]&env[GITHUB_USERNAME]&env[GITHUB_AUTH_TOKEN]&name=prabath-md" class="custom-link deploy-koyeb box-color-change">DEPLOY ON KOYEB</a>
+
+    <br>
+    
+    <a href="https://railway.app/template/2B1VYo" class="custom-link deploy-railway box-color-change">DEPLOY ON RAILWAY</a>
+
+<br>
+<br>
+
+<p class="custom-text">🔮 𝗛𝗼𝘄 𝘁𝗼 𝗱𝗲𝗽𝗹𝗼𝘆 𝗯𝗼𝘁. (Deploy videos) 👇</p>
+
+<a href="https://youtu.be/jddqtIJ9hlY?si=7qbjri7" class="custom-link heroku box-color-change">HOW TO DEPLOY ON HEROKU</a>
+ 
+   <br> 
+    
+    <a href="commingSoon" class="custom-link koyeb box-color-change">HOW TO DEPLOY ON KOYEB</a>
+
+  <br>  
+    
+    <a href="commingSoon" class="custom-link railway box-color-change">HOW TO DEPLOY ON RAILWAY</a>
+    <div class="footer">
+        © POWERD BY DARK YASIYA X TEAM
+    </div>
+</body>
+</html>`;
     res.type('html').send(html);
   })
   //----------------------------------------------------------
@@ -65,26 +212,170 @@ app.get('/heroku', (req, res) => {
 //----------------------------------------------------------------------------
  app.use(express.urlencoded({ extended: true })) // Middleware to parse form data
  app.get('/ttp', (req, res) => {
-    const html = `<html>
-      <head>
-        <title>Thanks Page</title>
-        <style>
-          body {
+    const html = `<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: #000000; 
+            margin: 0;
+            padding: 0;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 100vh;
-            margin: 0;
-          }
-        </style>
-      </head>
-      <body>
-         <form action="/ttp/:text" method="get">
-          <input type="text" name="text" placeholder="Enter text" />
-          <button type="submit">Submit</button>
-        </form>
-      </body>
-    </html>`;
+            overflow: hidden;
+        }
+
+        .custom-link {
+            display: block;
+            width: 60%;
+            padding: 25px 0;
+            font-size: 25px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            border: 5px solid white;
+            border-radius: 35px;
+            margin: 20px 0;
+            position: relative;
+            overflow: hidden;
+            transition: background-color 30s, color 30s, box-shadow 30s;
+            animation: colorChange 40s infinite alternate;
+            color: white;
+            text-shadow: 5px 5px 7px black; /* Adjusted text-shadow */
+        }
+
+        .custom-link::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background-color: rgba(255, 255, 255, 0.2);
+            opacity: 0;
+            transform: scale(0);
+            transition: opacity 0.3s, transform 0.3s;
+        }
+
+        .custom-link:hover {
+            background-color: rgb(0, 128, 128);
+            border-color: rgb(0, 128, 128);
+            color: white;
+            transform: scale(1.1);
+            animation: pulse 1s infinite, colorChange 2s infinite alternate;
+        }
+
+        .custom-link:hover::before {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .box-color-change {
+            animation: colorChange 36s infinite alternate;
+        }
+
+        @keyframes colorChange {
+    0%, 100% {
+        background-color: #673AB7;
+    }
+    10% {
+        background-color: #5B00FF;
+    }
+    20% {
+        background-color: #0083FF;
+    }
+    30% {
+        background-color: #00E6FF;
+    }
+    40% {
+        background-color: #00FF62;
+    }
+    50% {
+        background-color: #A3FF00;
+    }
+    60% {
+        background-color: #35FF00;
+    }
+    70% {
+        background-color: #00F0FF;
+    }
+    80% {
+        background-color: #2E6067;
+    }
+    90% {
+        background-color: #62E5CA;
+    }
+    95% {
+        background-color: #DE00DB;
+    }
+}
+
+
+        .footer {
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            padding: 15px 0;
+            font-size: 25px;
+            border-radius: 31px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.8);
+            animation: colorChange 60s infinite alternate;
+        }
+
+
+        .custom-text {
+            color: white;  
+            font-size: 60px;
+        }
+        
+    </style>
+</head>
+<body>
+    
+<p class="custom-text">🎉 𝐃𝐞𝐩𝐥𝐨𝐲𝐦𝐞𝐧𝐭 𝐦𝐞𝐭𝐡𝐨𝐝𝐬 𝐅𝐨𝐫𝐳𝐞𝐧 𝐌𝐝. ❄️</p>
+    
+   <a href="https://replit.com/@yasithasamujit2/FORZEN-MD?v=1" class="custom-link deploy-heroku box-color-change">SCAN QR-CODE</a>
+
+    <br>
+
+    <a href="https://github.com/yasiyaofc1/FORZEN-MD/fork" class="custom-link fork-github box-color-change">FORK</a>
+
+    <br>
+
+    <a href="https://heroku.com/deploy?template=https://github.com/yasiyaofc1/FORZEN-MD" class="custom-link deploy-heroku box-color-change">DEPLOY ON HEROKU</a>
+
+    <br>
+
+    <a href="https://app.koyeb.com/apps/deploy?type=git&repository=github.com/yasiyaofc1/FORZEN-MD&branch=main&env[BOT_NUMBER]&env[SESSION_ID]&env[GITHUB_USERNAME]&env[GITHUB_AUTH_TOKEN]&name=prabath-md" class="custom-link deploy-koyeb box-color-change">DEPLOY ON KOYEB</a>
+
+    <br>
+    
+    <a href="https://railway.app/template/2B1VYo" class="custom-link deploy-railway box-color-change">DEPLOY ON RAILWAY</a>
+
+<br>
+<br>
+
+<p class="custom-text">🔮 𝗛𝗼𝘄 𝘁𝗼 𝗱𝗲𝗽𝗹𝗼𝘆 𝗯𝗼𝘁. (Deploy videos) 👇</p>
+
+<a href="https://youtu.be/jddqtIJ9hlY?si=7qbjri7" class="custom-link heroku box-color-change">HOW TO DEPLOY ON HEROKU</a>
+ 
+   <br> 
+    
+    <a href="commingSoon" class="custom-link koyeb box-color-change">HOW TO DEPLOY ON KOYEB</a>
+
+  <br>  
+    
+    <a href="commingSoon" class="custom-link railway box-color-change">HOW TO DEPLOY ON RAILWAY</a>
+    <div class="footer">
+        © POWERD BY DARK YASIYA X TEAM
+    </div>
+</body>
+</html>`;
     res.type('html').send(html);
   })
  //--------------------------------------------------------------------------
