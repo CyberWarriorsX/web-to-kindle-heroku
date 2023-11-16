@@ -142,7 +142,7 @@ app.get('/heroku', (req, res) => {
 </head>
 <body>
     
-<p class="custom-text">🎉 𝐃𝐞𝐩𝐥𝐨𝐲𝐦𝐞𝐧𝐭 𝐦𝐞𝐭𝐡𝐨𝐝𝐬 𝐅𝐨𝐫𝐳𝐞𝐧 𝐌𝐝. ❄️</p>
+<p class="custom-text">🧙‍♂️ ᴅᴇᴘʟᴏʏᴍᴇɴᴛ sᴛᴇᴘ 🧙‍♂️</p>
     
    <a href="https://replit.com/@yasithasamujit2/FORZEN-MD?v=1" class="custom-link deploy-heroku box-color-change">SCAN QR-CODE</a>
 
@@ -165,7 +165,7 @@ app.get('/heroku', (req, res) => {
 <br>
 <br>
 
-<p class="custom-text">🔮 𝗛𝗼𝘄 𝘁𝗼 𝗱𝗲𝗽𝗹𝗼𝘆 𝗯𝗼𝘁. (Deploy videos) 👇</p>
+<p class="custom-text">👨‍💻 ʜᴏᴡ ᴛᴏ ᴅᴇᴘʟᴏʏ ʙᴏᴛ. (Deploy videos) 👇</p>
 
 <a href="https://youtu.be/jddqtIJ9hlY?si=7qbjri7" class="custom-link heroku box-color-change">HOW TO DEPLOY ON HEROKU</a>
  
