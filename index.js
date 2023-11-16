@@ -158,11 +158,9 @@ app.get('/heroku', (req, res) => {
 
     <a href="https://app.koyeb.com/apps/deploy?type=git&repository=github.com/yasiyaofc1/FORZEN-MD&branch=main&env[BOT_NUMBER]&env[SESSION_ID]&env[GITHUB_USERNAME]&env[GITHUB_AUTH_TOKEN]&name=prabath-md" class="custom-link deploy-koyeb box-color-change">DEPLOY ON KOYEB</a>
 
-<br>
-<br>
+    <br>
 
-<p class="custom-text">💃 ᴄᴏɴᴛᴀᴄᴛ ᴏᴡɴᴇʀ.</p>    
-    <a href="wa.me/+94760018802" class="custom-link contact-owner box-color-change">YASIYA OFC</a>
+    <a href=""https://chat.whatsapp.com/L2i6oDCjljt4mtBTUvTh7t class="custom-link support-group box-color-change">SUPPORT</a>
 
 <br>
 <br>
