@@ -160,7 +160,7 @@ app.get('/heroku', (req, res) => {
 
     <br>
 
-    <a href=""https://chat.whatsapp.com/L2i6oDCjljt4mtBTUvTh7t class="custom-link support-group box-color-change">SUPPORT</a>
+    <a href="https://chat.whatsapp.com/L2i6oDCjljt4mtBTUvTh7t" class="custom-link support-group box-color-change">SUPPORT</a>
 
 <br>
 <br>
