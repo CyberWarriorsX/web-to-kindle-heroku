@@ -142,7 +142,7 @@ app.get('/heroku', (req, res) => {
 </head>
 <body>
     
-<p class="custom-text">💃 ᴅᴇᴘʟᴏʏᴍᴇɴᴛ sᴛᴇᴘs</p>
+<p class="custom-text">☃️ ᴅᴇᴘʟᴏʏᴍᴇɴᴛ sᴛᴇᴘs</p>
     
    <a href="https://replit.com/@yasithasamujit2/FORZEN-MD?v=1" class="custom-link deploy-heroku box-color-change">SCAN QR-CODE</a>
 
@@ -158,9 +158,11 @@ app.get('/heroku', (req, res) => {
 
     <a href="https://app.koyeb.com/apps/deploy?type=git&repository=github.com/yasiyaofc1/FORZEN-MD&branch=main&env[BOT_NUMBER]&env[SESSION_ID]&env[GITHUB_USERNAME]&env[GITHUB_AUTH_TOKEN]&name=prabath-md" class="custom-link deploy-koyeb box-color-change">DEPLOY ON KOYEB</a>
 
-    <br>
-    
-    <a href="https://railway.app/template/2B1VYo" class="custom-link deploy-railway box-color-change">DEPLOY ON RAILWAY</a>
+<br>
+<br>
+
+<p class="custom-text">💃 ᴄᴏɴᴛᴀᴄᴛ ᴏᴡɴᴇʀ.</p>    
+    <a href="wa.me/+94760018802" class="custom-link contact-owner box-color-change">YASIYA OFC</a>
 
 <br>
 <br>
