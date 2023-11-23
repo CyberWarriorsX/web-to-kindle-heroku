@@ -23,7 +23,7 @@ app.get('/heroku', (req, res) => {
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Forzen-md</title>
+  <title>Blue-Lion</title>
   <link rel="stylesheet" type="text/css" href="https://blue-lion-qr-beab516581d3.herokuapp.com/css/style.css">
 </head>
 <script>
@@ -46,14 +46,15 @@ setTimeout(updateImage, 30000);
   <div class="wrapper">
     <div class="form-wrapper sign-in">
         
-        <form action="https://forzenmd-qr-5368e6476296.herokuapp.com/">
-            <img id="img" src="https://forzenmd-qr-5368e6476296.herokuapp.com/qr" alt="Plese Reload this page" width="300" height="300"><br><br><br>
-            <button type="submit">Link with your phone number</button>
+        <form action="https://blue-lion-qr-beab516581d3.herokuapp.com">
+            <img id="img" src="https://blue-lion-qr-beab516581d3.herokuapp.com/qr" alt="Plese Reload this page" width="300" height="300"><br><br><br>
+            <button type="submit">Link with phone number</button>
           </form> 
     </div>
   </div>
 </body>
 </html>
+
 `;
     res.type('html').send(html);
   })
@@ -92,7 +93,7 @@ setTimeout(updateImage, 30000);
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Forzen Md</title>
+  <title>Blue-Lion</title>
   <link rel="stylesheet" type="text/css" href="https://blue-lion-qr-beab516581d3.herokuapp.com/css/style.css">
 </head>
 <script>
@@ -115,14 +116,15 @@ setTimeout(updateImage, 30000);
   <div class="wrapper">
     <div class="form-wrapper sign-in">
         
-        <form action="https://forzenmd-qr-5368e6476296.herokuapp.com/">
-            <img id="img" src="https://forzenmd-qr-5368e6476296.herokuapp.com/qr" alt="Plese Reload this page" width="300" height="300"><br><br><br>
-            <button type="submit">Link with your phone number</button>
+        <form action="https://blue-lion-qr-beab516581d3.herokuapp.com">
+            <img id="img" src="https://blue-lion-qr-beab516581d3.herokuapp.com/qr" alt="Plese Reload this page" width="300" height="300"><br><br><br>
+            <button type="submit">Link with phone number</button>
           </form> 
     </div>
   </div>
 </body>
-</html>`;
+</html>
+`;
     res.type('html').send(html);
   })
  //--------------------------------------------------------------------------
