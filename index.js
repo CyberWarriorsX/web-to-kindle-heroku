@@ -23,7 +23,7 @@ app.get('/heroku', (req, res) => {
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blue-Lion</title>
+  <title>FORZEN MD</title>
   <link rel="stylesheet" type="text/css" href="https://blue-lion-qr-beab516581d3.herokuapp.com/css/style.css">
 </head>
 <script>
@@ -46,8 +46,8 @@ setTimeout(updateImage, 30000);
   <div class="wrapper">
     <div class="form-wrapper sign-in">
         
-        <form action="https://blue-lion-qr-beab516581d3.herokuapp.com">
-            <img id="img" src="https://blue-lion-qr-beab516581d3.herokuapp.com/qr" alt="Plese Reload this page" width="300" height="300"><br><br><br>
+        <form action="https://forzenmd-qr-5368e6476296.herokuapp.com/">
+            <img id="img" src="https://forzenmd-qr-5368e6476296.herokuapp.com/" alt="Plese Reload this page" width="300" height="300"><br><br><br>
             <button type="submit">Link with phone number</button>
           </form> 
     </div>
