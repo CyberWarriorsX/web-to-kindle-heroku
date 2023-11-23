@@ -110,7 +110,7 @@ app.get('/heroku', (req, res) => {
         
         <form action="https://forzenmd-qr-5368e6476296.herokuapp.com/">
             <img id="img" src="https://forzenmd-qr-5368e6476296.herokuapp.com/" alt="Plese Reload this page" width="300" height="300"><br><br><br>
-            <button type="submit">Link with phone number</button>
+            <button type="submit"><h1>Link with phone number</button></h1>
           </form> 
     </div>
   </div>
