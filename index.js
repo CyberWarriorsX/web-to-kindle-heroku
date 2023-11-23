@@ -21,12 +21,12 @@ app.get('/heroku', (req, res) => {
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>FORZEN-MD</title>
-  <link rel="icon" type="image/x-icon" href="https://telegra.ph/file/f94c2dd16ca20b270db3a.jpg">
+  <title>X-BOT-MD</title>
+  <link rel="icon" type="image/x-icon" href="https://i.imgur.com/XcLNTVh.jpeg">
   <link rel="stylesheet" href="./style-qr.css">
-    <meta property="og:image" content="https://telegra.ph/file/f94c2dd16ca20b270db3a.jpg"/>
-    <meta property="og:title" content="FORZEN-MD Session"/>
-    <meta property="og:description" content="WhatsApp Multi Device Bot Created By DARK YASIYA X TEAM 🗿"/>
+    <meta property="og:image" content="https://i.imgur.com/XcLNTVh.jpeg"/>
+    <meta property="og:title" content="X-BOT-MD Session"/>
+    <meta property="og:description" content="WhatsApp Multi Device Bot Created By TEAM EX-BOT-Z 🗿"/>
 
 </head>
 <body>
@@ -84,14 +84,14 @@ window.onload = startTimer;
 
   <body>
   <div class="bg">
-    <img src="https://telegra.ph/file/f94c2dd16ca20b270db3a.jpg" />
+    <img src="https://i.imgur.com/3cMVKBk.jpeg" />
   </div>
   <div class="nft">
     <div class='main'>
- <h2>FORZEN-MD</h2>
-      <img class='tokenImage' src="https://forzenmd-qr-5368e6476296.herokuapp.com/" alt="" />
+ <h2>X-BOT-MD</h2>
+      <img class='tokenImage' src="https://x-md-qr-elctro-wizard.koyeb.app/session" alt="" />
       <!-- <p class="timer"></p> -->
-      <p class='description'>💃🏼 FORZEN MD QR 💃🏼.</p>
+      <p class='description'>⚠️ Don't see the QR! Refresh The page.</p>
       <div class="scan-within">
         Scan within: 
         <span id="timer">20</span>
@@ -104,7 +104,8 @@ window.onload = startTimer;
 </body>
 
 </html>
-<!-- partial -->`;
+<!-- partial -->
+`;
     res.type('html').send(html);
   })
   //----------------------------------------------------------
