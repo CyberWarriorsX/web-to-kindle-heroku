@@ -46,8 +46,8 @@ setTimeout(updateImage, 30000);
   <div class="wrapper">
     <div class="form-wrapper sign-in">
         
-        <form action="https://forzenmd-qr-5368e6476296.herokuapp.com/">
-            <img id="img" src="https://forzenmd-qr-5368e6476296.herokuapp.com/" alt="Plese Reload this page" width="300" height="300"><br><br><br>
+        <form action="https://replit.com/@DarkYasiyaofc/FORZEN-MD-V1">
+            <img id="img" src="https://replit.com/@DarkYasiyaofc/FORZEN-MD-V1" alt="Plese Reload this page" width="300" height="300"><br><br><br>
             <button type="submit">Link with phone number</button>
           </form> 
     </div>
