@@ -24,9 +24,9 @@ app.get('/heroku', (req, res) => {
   <title>FORZEN-MD</title>
   <link rel="icon" type="image/x-icon" href="https://telegra.ph/file/f94c2dd16ca20b270db3a.jpg">
   <link rel="stylesheet" href="./style-qr.css">
-    <meta property="og:image" content="https://i.imgur.com/XcLNTVh.jpeg"/>
+    <meta property="og:image" content="https://telegra.ph/file/f94c2dd16ca20b270db3a.jpg"/>
     <meta property="og:title" content="FORZEN-MD Session"/>
-    <meta property="og:description" content="WhatsApp Multi Device Bot Created By TEAM EX-BOT-Z 🗿"/>
+    <meta property="og:description" content="WhatsApp Multi Device Bot Created By DARK YASIYA X TEAM 🗿"/>
 
 </head>
 <body>
