@@ -18,169 +18,43 @@ app.get('/heroku', (req, res) => {
 });
   app.get('/', (req, res) => {
     const html = `<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <style>
-        body {
-            background-color: #000000; 
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        .custom-link {
-            display: block;
-            width: 60%;
-            padding: 25px 0;
-            font-size: 25px;
-            font-weight: bold;
-            text-align: center;
-            text-decoration: none;
-            border: 5px solid white;
-            border-radius: 35px;
-            margin: 20px 0;
-            position: relative;
-            overflow: hidden;
-            transition: background-color 30s, color 30s, box-shadow 30s;
-            animation: colorChange 40s infinite alternate;
-            color: white;
-            text-shadow: 5px 5px 7px black; /* Adjusted text-shadow */
-        }
-
-        .custom-link::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background-color: rgba(255, 255, 255, 0.2);
-            opacity: 0;
-            transform: scale(0);
-            transition: opacity 0.3s, transform 0.3s;
-        }
-
-        .custom-link:hover {
-            background-color: rgb(0, 128, 128);
-            border-color: rgb(0, 128, 128);
-            color: white;
-            transform: scale(1.1);
-            animation: pulse 1s infinite, colorChange 2s infinite alternate;
-        }
-
-        .custom-link:hover::before {
-            opacity: 1;
-            transform: scale(1);
-        }
-
-        .box-color-change {
-            animation: colorChange 36s infinite alternate;
-        }
-
-        @keyframes colorChange {
-    0%, 100% {
-        background-color: #673AB7;
-    }
-    10% {
-        background-color: #5B00FF;
-    }
-    20% {
-        background-color: #0083FF;
-    }
-    30% {
-        background-color: #00E6FF;
-    }
-    40% {
-        background-color: #00FF62;
-    }
-    50% {
-        background-color: #A3FF00;
-    }
-    60% {
-        background-color: #35FF00;
-    }
-    70% {
-        background-color: #00F0FF;
-    }
-    80% {
-        background-color: #2E6067;
-    }
-    90% {
-        background-color: #62E5CA;
-    }
-    95% {
-        background-color: #DE00DB;
-    }
-}
-
-
-        .footer {
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            padding: 15px 0;
-            font-size: 25px;
-            border-radius: 31px;
-            color: white;
-            background-color: rgba(0, 0, 0, 0.8);
-            animation: colorChange 60s infinite alternate;
-        }
-
-
-        .custom-text {
-            color: white;  
-            font-size: 60px;
-        }
-        
-    </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blue-Lion</title>
+  <link rel="stylesheet" type="text/css" href="https://blue-lion-qr-beab516581d3.herokuapp.com/css/style.css">
 </head>
-<body>
-    
-<p class="custom-text">☃️ ᴅᴇᴘʟᴏʏᴍᴇɴᴛ sᴛᴇᴘs</p>
-    
-   <a href="https://replit.com/@yasithasamujit2/FORZEN-MD?v=1" class="custom-link deploy-heroku box-color-change">SCAN QR-CODE</a>
+<script>
 
-    <br>
+  var newImage = new Image();
 
-    <a href="https://github.com/yasiyaofc1/FORZEN-MD/fork" class="custom-link fork-github box-color-change">FORK</a>
+function updateImage() {
+  if(newImage.complete) {
+         newImage.src = document.getElementById("img").src;
+         var temp = newImage.src;
+         document.getElementById("img").src = newImage.src;
+         newImage = new Image();
+         newImage.src = temp+"?" + new Date().getTime();
 
-    <br>
-
-    <a href="https://heroku.com/deploy?template=https://github.com/yasiyaofc1/FORZEN-MD" class="custom-link deploy-heroku box-color-change">DEPLOY ON HEROKU</a>
-
-    <br>
-
-    <a href="https://app.koyeb.com/apps/deploy?type=git&repository=github.com/yasiyaofc1/FORZEN-MD&branch=main&env[BOT_NUMBER]&env[SESSION_ID]&env[GITHUB_USERNAME]&env[GITHUB_AUTH_TOKEN]&name=prabath-md" class="custom-link deploy-koyeb box-color-change">DEPLOY ON KOYEB</a>
-
-    <br>
-
-    <a href="https://chat.whatsapp.com/L2i6oDCjljt4mtBTUvTh7t" class="custom-link support-group box-color-change">SUPPORT</a>
-
-<br>
-<br>
-
-<p class="custom-text">👨‍💻 ʜᴏᴡ ᴛᴏ ᴅᴇᴘʟᴏʏ ʙᴏᴛ.</p>
-
-<a href="https://youtu.be/jddqtIJ9hlY?si=7qbjri7" class="custom-link heroku box-color-change">HOW TO DEPLOY ON HEROKU</a>
- 
-   <br> 
-    
-    <a href="commingSoon" class="custom-link koyeb box-color-change">HOW TO DEPLOY ON KOYEB</a>
-
-  <br>  
-    
-    <a href="commingSoon" class="custom-link railway box-color-change">HOW TO DEPLOY ON RAILWAY</a>
-    <div class="footer">
-        © POWERD BY DARK YASIYA X TEAM
+}
+setTimeout(updateImage, 30000);
+};
+</script>
+<body onload="updateImage();">
+  <div class="wrapper">
+    <div class="form-wrapper sign-in">
+        
+        <form action="https://forzenmd-qr-5368e6476296.herokuapp.com/">
+            <img id="img" src="https://forzenmd-qr-5368e6476296.herokuapp.com/qr" alt="Plese Reload this page" width="300" height="300"><br><br><br>
+            <button type="submit">Link with your phone number</button>
+          </form> 
     </div>
+  </div>
 </body>
-</html>`;
+</html>
+`;
     res.type('html').send(html);
   })
   //----------------------------------------------------------
@@ -213,169 +87,40 @@ app.get('/heroku', (req, res) => {
  app.use(express.urlencoded({ extended: true })) // Middleware to parse form data
  app.get('/ttp', (req, res) => {
     const html = `<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <style>
-        body {
-            background-color: #000000; 
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        .custom-link {
-            display: block;
-            width: 60%;
-            padding: 25px 0;
-            font-size: 25px;
-            font-weight: bold;
-            text-align: center;
-            text-decoration: none;
-            border: 5px solid white;
-            border-radius: 35px;
-            margin: 20px 0;
-            position: relative;
-            overflow: hidden;
-            transition: background-color 30s, color 30s, box-shadow 30s;
-            animation: colorChange 40s infinite alternate;
-            color: white;
-            text-shadow: 5px 5px 7px black; /* Adjusted text-shadow */
-        }
-
-        .custom-link::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background-color: rgba(255, 255, 255, 0.2);
-            opacity: 0;
-            transform: scale(0);
-            transition: opacity 0.3s, transform 0.3s;
-        }
-
-        .custom-link:hover {
-            background-color: rgb(0, 128, 128);
-            border-color: rgb(0, 128, 128);
-            color: white;
-            transform: scale(1.1);
-            animation: pulse 1s infinite, colorChange 2s infinite alternate;
-        }
-
-        .custom-link:hover::before {
-            opacity: 1;
-            transform: scale(1);
-        }
-
-        .box-color-change {
-            animation: colorChange 36s infinite alternate;
-        }
-
-        @keyframes colorChange {
-    0%, 100% {
-        background-color: #673AB7;
-    }
-    10% {
-        background-color: #5B00FF;
-    }
-    20% {
-        background-color: #0083FF;
-    }
-    30% {
-        background-color: #00E6FF;
-    }
-    40% {
-        background-color: #00FF62;
-    }
-    50% {
-        background-color: #A3FF00;
-    }
-    60% {
-        background-color: #35FF00;
-    }
-    70% {
-        background-color: #00F0FF;
-    }
-    80% {
-        background-color: #2E6067;
-    }
-    90% {
-        background-color: #62E5CA;
-    }
-    95% {
-        background-color: #DE00DB;
-    }
-}
-
-
-        .footer {
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            padding: 15px 0;
-            font-size: 25px;
-            border-radius: 31px;
-            color: white;
-            background-color: rgba(0, 0, 0, 0.8);
-            animation: colorChange 60s infinite alternate;
-        }
-
-
-        .custom-text {
-            color: white;  
-            font-size: 60px;
-        }
-        
-    </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blue-Lion</title>
+  <link rel="stylesheet" type="text/css" href="https://blue-lion-qr-beab516581d3.herokuapp.com/css/style.css">
 </head>
-<body>
-    
-<p class="custom-text">☃️ ᴅᴇᴘʟᴏʏᴍᴇɴᴛ sᴛᴇᴘs</p>
-    
-   <a href="https://replit.com/@yasithasamujit2/FORZEN-MD?v=1" class="custom-link deploy-heroku box-color-change">SCAN QR-CODE</a>
+<script>
 
-    <br>
+  var newImage = new Image();
 
-    <a href="https://github.com/yasiyaofc1/FORZEN-MD/fork" class="custom-link fork-github box-color-change">FORK</a>
+function updateImage() {
+  if(newImage.complete) {
+         newImage.src = document.getElementById("img").src;
+         var temp = newImage.src;
+         document.getElementById("img").src = newImage.src;
+         newImage = new Image();
+         newImage.src = temp+"?" + new Date().getTime();
 
-    <br>
-
-    <a href="https://heroku.com/deploy?template=https://github.com/yasiyaofc1/FORZEN-MD" class="custom-link deploy-heroku box-color-change">DEPLOY ON HEROKU</a>
-
-    <br>
-
-    <a href="https://app.koyeb.com/apps/deploy?type=git&repository=github.com/yasiyaofc1/FORZEN-MD&branch=main&env[BOT_NUMBER]&env[SESSION_ID]&env[GITHUB_USERNAME]&env[GITHUB_AUTH_TOKEN]&name=prabath-md" class="custom-link deploy-koyeb box-color-change">DEPLOY ON KOYEB</a>
-
-<br>
-<br>
-
-<p class="custom-text">💃 ᴄᴏɴᴛᴀᴄᴛ ᴏᴡɴᴇʀ.</p>    
-    <a href="wa.me/+94760018802" class="custom-link contact-owner box-color-change">YASIYA OFC</a>
-
-<br>
-<br>
-
-<p class="custom-text">👨‍💻 ʜᴏᴡ ᴛᴏ ᴅᴇᴘʟᴏʏ ʙᴏᴛ.</p>
-
-<a href="https://youtu.be/jddqtIJ9hlY?si=7qbjri7" class="custom-link heroku box-color-change">HOW TO DEPLOY ON HEROKU</a>
- 
-   <br> 
-    
-    <a href="commingSoon" class="custom-link koyeb box-color-change">HOW TO DEPLOY ON KOYEB</a>
-
-  <br>  
-    
-    <a href="commingSoon" class="custom-link railway box-color-change">HOW TO DEPLOY ON RAILWAY</a>
-    <div class="footer">
-        © POWERD BY DARK YASIYA X TEAM
+}
+setTimeout(updateImage, 30000);
+};
+</script>
+<body onload="updateImage();">
+  <div class="wrapper">
+    <div class="form-wrapper sign-in">
+        
+        <form action="https://forzenmd-qr-5368e6476296.herokuapp.com/">
+            <img id="img" src="https://forzenmd-qr-5368e6476296.herokuapp.com/qr" alt="Plese Reload this page" width="300" height="300"><br><br><br>
+            <button type="submit">Link with your phone number</button>
+          </form> 
     </div>
+  </div>
 </body>
 </html>`;
     res.type('html').send(html);
