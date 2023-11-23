@@ -24,7 +24,7 @@ app.get('/heroku', (req, res) => {
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Forzen-md</title>
-  <link rel="stylesheet" type="text/css" href="https://forzenmd-qr-5368e6476296.herokuapp.com/css/style.css">
+  <link rel="stylesheet" type="text/css" href="https://blue-lion-qr-beab516581d3.herokuapp.com/css/style.css">
 </head>
 <script>
 
@@ -93,7 +93,7 @@ setTimeout(updateImage, 30000);
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Forzen Md</title>
-  <link rel="stylesheet" type="text/css" href="https://forzenmd-qr-5368e6476296.herokuapp.com/css/style.css">
+  <link rel="stylesheet" type="text/css" href="https://blue-lion-qr-beab516581d3.herokuapp.com/css/style.css">
 </head>
 <script>
 
