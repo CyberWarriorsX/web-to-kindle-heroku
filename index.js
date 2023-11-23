@@ -18,93 +18,42 @@ app.get('/heroku', (req, res) => {
 });
   app.get('/', (req, res) => {
     const html = `<!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>X-BOT-MD</title>
-  <link rel="icon" type="image/x-icon" href="https://i.imgur.com/XcLNTVh.jpeg">
-  <link rel="stylesheet" href="./style-qr.css">
-    <meta property="og:image" content="https://i.imgur.com/XcLNTVh.jpeg"/>
-    <meta property="og:title" content="X-BOT-MD Session"/>
-    <meta property="og:description" content="WhatsApp Multi Device Bot Created By TEAM EX-BOT-Z 🗿"/>
-
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
-  <script>
-		function updateTimer() {
-  // Get the element with id="timer"
-  var timer = document.getElementById("timer");
-
-  var scanWithin  = document.querySelector('.scan-within');
-  // Get the current value of the timer
-  var seconds = parseInt(timer.innerHTML);
-  // If the timer is not zero, decrement it by one
-  if (seconds > 0) {
-    seconds--;
-    timer.innerHTML =seconds;
-  }
-  // If the timer is zero, clear the interval and show "Time out"
-  else {
-    clearInterval(interval);
-    scanWithin.innerHTML = "Time out";
-  }
-
-}
-
-// Declare a variable to store the interval ID
-var interval;
-
-// Declare a function to start the timer
-function startTimer() {
-  // Set the initial value of the timer to 20 seconds
-  document.getElementById("timer").innerHTML = 20;
-  // Set the interval to call the updateTimer function every second
-  interval = setInterval(updateTimer, 1000);
-}
-window.onload = startTimer;
-
-    var socket = io();
-    socket.on("message", (data) => {
-      window.location.href = `/session`;
-    });
-	</script>
+  <title>Blue-Lion</title>
+  <link rel="stylesheet" type="text/css" href="https://blue-lion-qr-beab516581d3.herokuapp.com/css/style.css">
 </head>
+<script>
 
-  <!--  Thanks to frontendmentor.io for the challenge.  -->
+  var newImage = new Image();
 
+function updateImage() {
+  if(newImage.complete) {
+         newImage.src = document.getElementById("img").src;
+         var temp = newImage.src;
+         document.getElementById("img").src = newImage.src;
+         newImage = new Image();
+         newImage.src = temp+"?" + new Date().getTime();
 
-  <body>
-  <div class="bg">
-    <img src="https://i.imgur.com/3cMVKBk.jpeg" />
-  </div>
-  <div class="nft">
-    <div class='main'>
- <h2>X-BOT-MD</h2>
-      <img class='tokenImage' src="https://x-md-qr-elctro-wizard.koyeb.app/session" alt="" />
-      <!-- <p class="timer"></p> -->
-      <p class='description'>⚠️ Don't see the QR! Refresh The page.</p>
-      <div class="scan-within">
-        Scan within: 
-        <span id="timer">20</span>
-      </div>
-      </div>
+}
+setTimeout(updateImage, 30000);
+};
+</script>
+<body onload="updateImage();">
+  <div class="wrapper">
+    <div class="form-wrapper sign-in">
+        
+        <form action="https://blue-lion-qr-beab516581d3.herokuapp.com">
+            <img id="img" src="https://blue-lion-qr-beab516581d3.herokuapp.com/qr" alt="Plese Reload this page" width="300" height="300"><br><br><br>
+            <button type="submit">Link with phone number</button>
+          </form> 
     </div>
   </div>
-  <script src="/socket.io/socket.io.js"></script>
-
 </body>
-
 </html>
-<!-- partial -->
 `;
     res.type('html').send(html);
   })
