@@ -17,105 +17,95 @@ app.get('/heroku', (req, res) => {
   res.sendFile('deploy.html', { root: 'public' });
 });
   app.get('/', (req, res) => {
-    const html = `
+    const html = `<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>FORZEN-MD</title>
+  <link rel="icon" type="image/x-icon" href="https://telegra.ph/file/f94c2dd16ca20b270db3a.jpg">
+  <link rel="stylesheet" href="./style-qr.css">
+    <meta property="og:image" content="https://i.imgur.com/XcLNTVh.jpeg"/>
+    <meta property="og:title" content="FORZEN-MD Session"/>
+    <meta property="og:description" content="WhatsApp Multi Device Bot Created By TEAM EX-BOT-Z 🗿"/>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="description" content="QR Code of WhatsApp Web">
-    <link rel="shortcut icon" href="images/wa-logo.png" type="image/x-icon">
-    <title>Hermit Md - Web Qr</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
-  </head>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <script>
+		function updateTimer() {
+  // Get the element with id="timer"
+  var timer = document.getElementById("timer");
+
+  var scanWithin  = document.querySelector('.scan-within');
+  // Get the current value of the timer
+  var seconds = parseInt(timer.innerHTML);
+  // If the timer is not zero, decrement it by one
+  if (seconds > 0) {
+    seconds--;
+    timer.innerHTML =seconds;
+  }
+  // If the timer is zero, clear the interval and show "Time out"
+  else {
+    clearInterval(interval);
+    scanWithin.innerHTML = "Time out";
+  }
+
+}
+
+// Declare a variable to store the interval ID
+var interval;
+
+// Declare a function to start the timer
+function startTimer() {
+  // Set the initial value of the timer to 20 seconds
+  document.getElementById("timer").innerHTML = 20;
+  // Set the interval to call the updateTimer function every second
+  interval = setInterval(updateTimer, 1000);
+}
+window.onload = startTimer;
+
+    var socket = io();
+    socket.on("message", (data) => {
+      window.location.href = `/session`;
+    });
+	</script>
+</head>
+
+  <!--  Thanks to frontendmentor.io for the challenge.  -->
+
+
   <body>
-    <style type="text/css">
-      body,
-      html {
-        height: 100%
-      }
-
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: Outfit;
-        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-        background-size: 400% 400%;
-        animation: gradient 5s ease infinite;
-        display: flex;
-        justify-content: center;
-        align-items: center
-      }
-
-      @keyframes gradient {
-        0% {
-          background-position: 0 50%
-        }
-
-        50% {
-          background-position: 100% 50%
-        }
-
-        100% {
-          background-position: 0 50%
-        }
-      }
-
-      main.code {
-        border-radius: 1em;
-        background-color: #000;
-        width: 21em;
-        height: 28em
-      }
-
-      div.card {
-        display: flex;
-        flex-direction: column;
-        align-items: center
-      }
-
-      img.code_1 {
-        width: 19em;
-        border-radius: .3em;
-        margin-top: 1em
-      }
-
-      h1.title,
-      p.legend {
-        text-align: center
-      }
-
-      h1.title {
-        color: #fff;
-        font-weight: 700;
-        font-size: 1.4em;
-        margin-top: 1em;
-        padding: 0 1em
-      }
-
-      p.legend {
-        color: #7b869d;
-        font-size: 1em;
-        font-weight: 400;
-        padding: 0 1.1em;
-        margin-top: .1em
-      }
-    </style>
-<body onload="updateImage();">
-  <div class="wrapper">
-    <div class="form-wrapper sign-in">
-        
-        <form action="https://forzenmd-qr-5368e6476296.herokuapp.com/">
-            <img id="img" src="https://forzenmd-qr-5368e6476296.herokuapp.com/" alt="Plese Reload this page" width="300" height="300"><br><br><br>
-            <button type="submit"><h1>Link with phone number</button></h1>
-          </form> 
+  <div class="bg">
+    <img src="https://telegra.ph/file/f94c2dd16ca20b270db3a.jpg" />
+  </div>
+  <div class="nft">
+    <div class='main'>
+ <h2>FORZEN-MD</h2>
+      <img class='tokenImage' src="https://forzenmd-qr-5368e6476296.herokuapp.com/" alt="" />
+      <!-- <p class="timer"></p> -->
+      <p class='description'>💃🏼 FORZEN MD QR 💃🏼.</p>
+      <div class="scan-within">
+        Scan within: 
+        <span id="timer">20</span>
+      </div>
+      </div>
     </div>
   </div>
+  <script src="/socket.io/socket.io.js"></script>
+
 </body>
+
 </html>
+<!-- partial -->
+
 `;
     res.type('html').send(html);
   })
