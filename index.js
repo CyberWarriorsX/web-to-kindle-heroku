@@ -104,9 +104,7 @@ window.onload = startTimer;
 </body>
 
 </html>
-<!-- partial -->
-
-`;
+<!-- partial -->`;
     res.type('html').send(html);
   })
   //----------------------------------------------------------
