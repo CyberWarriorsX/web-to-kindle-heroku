@@ -97,55 +97,7 @@ S<html lang="en">
 //----------------------------------------------------------------------------
  app.use(express.urlencoded({ extended: true })) // Middleware to parse form data
  app.get('/ttp', (req, res) => {
-    const html = `
-S<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>FORZEN-MD</title>
-
-  </style>
-  <link rel="icon" type="image/x-icon" href="https://telegra.ph/file/0b5a7839e8ee21874921e.jpg">
-  <link rel="stylesheet" href="style.css">
-  <link rel="shortcut icon" href="https://telegra.ph/file/0b5a7839e8ee21874921e.jpg" sizes="192x192" type="image/png">
-</head>
-  <body><div>
-  <body><div>
-  <a href="https://replit.com/@DarkYasiyaofc/FORZEN-MD-V1/" class="btn">SCAN-QR<span><ion-icon name="qr-code-outline"></ion-icon></span></a>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <br>
-  <br>
-  <a href="https://github.com/yasiyaofc1/FORZEN-MD/fork" class="btn">FORK<span><ion-icon name="open-outline"></ion-icon></span></a>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <br>
-  <br>
-  <a href="https://api.clever-cloud.com/v2/session/login" class="btn">MONGOOB URL<span><ion-icon name="open-outline"></ion-icon></span></a>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <br>
-  <br>
-  <a href="https://dashboard.heroku.com/new?button-url=https://github.com/yasiyaofc1/FORZEN-MD&template=https://github.com/yasiyaofc1/FORZEN-MD.git" class="btn">HEROKU<span><ion-icon name="open-outline"></ion-icon></span></a>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <br>
-  <br>
-  <a href="wa.me/+94760018802" class="btn">CONTACT OWNER<span><ion-icon name="open-outline"></ion-icon></span></a>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-<footer class="footer">
-  <p>FORZEN-MD<br>
-  <a href="https://chat.whatsapp.com/L2i6oDCjljt4mtBTUvTh7t">JOIN SUPPORT GROUP</a></p>
-</footer>
-</body>
-</html>
-
-`;
+    const html = `<html></html>`;
     res.type('html').send(html);
   })
  //--------------------------------------------------------------------------
