@@ -17,8 +17,7 @@ app.get('/heroku', (req, res) => {
   res.sendFile('deploy.html', { root: 'public' });
 });
   app.get('/', (req, res) => {
-    const html = `
-S<html lang="en">
+    const html = `<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>FORZEN-MD</title>
