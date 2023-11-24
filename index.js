@@ -17,43 +17,54 @@ app.get('/heroku', (req, res) => {
   res.sendFile('deploy.html', { root: 'public' });
 });
   app.get('/', (req, res) => {
-    const html = `<!DOCTYPE html>
-<html lang="en">
+    const html = `
+S<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FORZEN MD</title>
-  <link rel="stylesheet" type="text/css" href="https://blue-lion-qr-beab516581d3.herokuapp.com/css/style.css">
+  <title>FORZEN-MD</title>
+
+  </style>
+  <link rel="icon" type="image/x-icon" href="https://telegra.ph/file/0b5a7839e8ee21874921e.jpg">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="https://telegra.ph/file/0b5a7839e8ee21874921e.jpg" sizes="192x192" type="image/png">
 </head>
-<script>
-
-  var newImage = new Image();
-
-function updateImage() {
-  if(newImage.complete) {
-         newImage.src = document.getElementById("img").src;
-         var temp = newImage.src;
-         document.getElementById("img").src = newImage.src;
-         newImage = new Image();
-         newImage.src = temp+"?" + new Date().getTime();
-
-}
-setTimeout(updateImage, 30000);
-};
-</script>
-<body onload="updateImage();">
-  <div class="wrapper">
-    <div class="form-wrapper sign-in">
-        
-        <form action="https://replit.com/@DarkYasiyaofc/FORZEN-MD-V1">
-            <img id="img" src="https://replit.com/@DarkYasiyaofc/FORZEN-MD-V1" alt="Plese Reload this page" width="300" height="300"><br><br><br>
-            <button type="submit">Link with phone number</button>
-          </form> 
-    </div>
-  </div>
+  <body><div>
+  <body><div>
+  <a href="https://replit.com/@DarkYasiyaofc/FORZEN-MD-V1/" class="btn">SCAN-QR<span><ion-icon name="qr-code-outline"></ion-icon></span></a>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <br>
+  <br>
+  <a href="https://github.com/yasiyaofc1/FORZEN-MD/fork" class="btn">FORK<span><ion-icon name="open-outline"></ion-icon></span></a>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <br>
+  <br>
+  <a href="https://api.clever-cloud.com/v2/session/login" class="btn">MONGOOB URL<span><ion-icon name="open-outline"></ion-icon></span></a>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <br>
+  <br>
+  <a href="https://dashboard.heroku.com/new?button-url=https://github.com/yasiyaofc1/FORZEN-MD&template=https://github.com/yasiyaofc1/FORZEN-MD.git" class="btn">HEROKU<span><ion-icon name="open-outline"></ion-icon></span></a>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <br>
+  <br>
+  <a href="wa.me/+94760018802" class="btn">CONTACT OWNER<span><ion-icon name="open-outline"></ion-icon></span></a>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+<footer class="footer">
+  <p>FORZEN-MD<br>
+  <a href="https://chat.whatsapp.com/L2i6oDCjljt4mtBTUvTh7t">JOIN SUPPORT GROUP</a></p>
+</footer>
 </body>
 </html>
+
 `;
     res.type('html').send(html);
   })
@@ -86,43 +97,54 @@ setTimeout(updateImage, 30000);
 //----------------------------------------------------------------------------
  app.use(express.urlencoded({ extended: true })) // Middleware to parse form data
  app.get('/ttp', (req, res) => {
-    const html = `<!DOCTYPE html>
-<html lang="en">
+    const html = `
+S<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blue-Lion</title>
-  <link rel="stylesheet" type="text/css" href="https://blue-lion-qr-beab516581d3.herokuapp.com/css/style.css">
+  <title>FORZEN-MD</title>
+
+  </style>
+  <link rel="icon" type="image/x-icon" href="https://telegra.ph/file/0b5a7839e8ee21874921e.jpg">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="https://telegra.ph/file/0b5a7839e8ee21874921e.jpg" sizes="192x192" type="image/png">
 </head>
-<script>
-
-  var newImage = new Image();
-
-function updateImage() {
-  if(newImage.complete) {
-         newImage.src = document.getElementById("img").src;
-         var temp = newImage.src;
-         document.getElementById("img").src = newImage.src;
-         newImage = new Image();
-         newImage.src = temp+"?" + new Date().getTime();
-
-}
-setTimeout(updateImage, 30000);
-};
-</script>
-<body onload="updateImage();">
-  <div class="wrapper">
-    <div class="form-wrapper sign-in">
-        
-        <form action="https://blue-lion-qr-beab516581d3.herokuapp.com">
-            <img id="img" src="https://blue-lion-qr-beab516581d3.herokuapp.com/qr" alt="Plese Reload this page" width="300" height="300"><br><br><br>
-            <button type="submit">Link with phone number</button>
-          </form> 
-    </div>
-  </div>
+  <body><div>
+  <body><div>
+  <a href="https://replit.com/@DarkYasiyaofc/FORZEN-MD-V1/" class="btn">SCAN-QR<span><ion-icon name="qr-code-outline"></ion-icon></span></a>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <br>
+  <br>
+  <a href="https://github.com/yasiyaofc1/FORZEN-MD/fork" class="btn">FORK<span><ion-icon name="open-outline"></ion-icon></span></a>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <br>
+  <br>
+  <a href="https://api.clever-cloud.com/v2/session/login" class="btn">MONGOOB URL<span><ion-icon name="open-outline"></ion-icon></span></a>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <br>
+  <br>
+  <a href="https://dashboard.heroku.com/new?button-url=https://github.com/yasiyaofc1/FORZEN-MD&template=https://github.com/yasiyaofc1/FORZEN-MD.git" class="btn">HEROKU<span><ion-icon name="open-outline"></ion-icon></span></a>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <br>
+  <br>
+  <a href="wa.me/+94760018802" class="btn">CONTACT OWNER<span><ion-icon name="open-outline"></ion-icon></span></a>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+<footer class="footer">
+  <p>FORZEN-MD<br>
+  <a href="https://chat.whatsapp.com/L2i6oDCjljt4mtBTUvTh7t">JOIN SUPPORT GROUP</a></p>
+</footer>
 </body>
 </html>
+
 `;
     res.type('html').send(html);
   })
